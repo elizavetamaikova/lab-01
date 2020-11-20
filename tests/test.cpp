@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include "Student.hpp"
+#include <fstream>
 
 TEST(Parse, FromString){
 std::string test_string =\
