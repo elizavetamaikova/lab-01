@@ -1,9 +1,7 @@
-//
-// Created by lizer on 04.10.2020.
-//
+// Copyright 2020 elizavetamaikova
+#ifndef INCLUDE_STUDENT_HPP_
+#define INCLUDE_STUDENT_HPP_
 
-#ifndef PARSER_STUDENT_HPP
-#define PARSER_STUDENT_HPP
 #include <vector>
 #include "serializer.hpp"
 #include <any>
@@ -45,11 +43,11 @@ class Student {
   void print_table();
   void print_hor();
   std::string ret_string();
+  friend std::ostream& operator << (std::ostream &out, Student& _student);
 
  private:
   std::vector<student_inf> _students;
   uint32_t _student_size[4];
   std::string _out;
 };
-
-#endif  // PARSER_STUDENT_HPP
+#endif  // INCLUDE_STUDENT_HPP_
